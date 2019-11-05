@@ -1,10 +1,10 @@
 import Foundation
 
-struct Info: Codable {
-    var title: String
-    var description: String?
-    var termsOfService: String?
-    var version: String
-    var contact: Contact?
-    var license: License?
+public class Info: Codable {
+    public private(set) var title: String
+    public private(set) var description: String?
+    public private(set) var termsOfService: String?
+    public private(set) var version: String
+    public private(set) var contact: Contact?
+    public private(set) var license: License?
 }

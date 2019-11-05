@@ -1,7 +1,7 @@
 import Foundation
 
-struct Tag: Codable {
-    var name: String
-    var description: String?
-    var externalDocs: ExternalDocumentation?   
+public class Tag: Codable {
+    public private(set) var name: String
+    public private(set) var description: String?
+    public private(set) var externalDocs: ExternalDocumentation?   
 }

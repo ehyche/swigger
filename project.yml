@@ -1,0 +1,22 @@
+name: Swigger
+options:
+  bundleIdPrefix: org.ehyche.swigger
+targets:
+  Swigger_Framework:
+    type: framework
+    platform: iOS
+    deploymentTarget: "11.0"
+    sources: 
+      - Sources
+    settings:
+      SWIFT_VERSION: "5.0"
+  Swigger_Tests:
+    type: bundle.unit-test
+    platform: iOS
+    deploymentTarget: "11.0"
+    sources: 
+        - Tests
+    settings:
+      SWIFT_VERSION: "5.0"
+    dependencies:
+      - target: Swigger_Framework

@@ -1,6 +1,6 @@
 import Foundation
 
-struct ExternalDocumentation: Codable {
-    var description: String?
-    var url: String
+public class ExternalDocumentation: Codable {
+    public private(set) var description: String?
+    public private(set) var url: String
 }

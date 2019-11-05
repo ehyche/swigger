@@ -1,7 +1,7 @@
 import Foundation
 
-struct Contact: Codable {
-    var name: String?
-    var url: String?
-    var email: String?   
+public class Contact: Codable {
+    public private(set) var name: String?
+    public private(set) var url: String?
+    public private(set) var email: String?
 }
