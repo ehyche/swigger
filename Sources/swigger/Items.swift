@@ -1,5 +1,5 @@
 import Foundation
 
-public class Items: Codable {
+public struct Items: Codable {
     
 }

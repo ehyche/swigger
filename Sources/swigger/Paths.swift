@@ -1,8 +1,7 @@
 import Foundation
 
-public struct License: Codable {
-    public private(set) var name: String
-    public private(set) var url: String?
+public struct Paths: Codable {
+    public private(set) var paths: [String:PathItem]?
     // TODO: Handle non-String value vendor extensions
     public private(set) var vendorExtensions: [String:String]?
 }

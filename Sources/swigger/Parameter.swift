@@ -1,17 +1,25 @@
 import Foundation
 
-public class Parameter: Codable {
+public protocol Parameter {
+    var name: String { get }
+    var `in`: ParameterLocation { get }
+    var description: String? { get }
+    var `required`: Bool? { get }
+}
+
+public struct BodyParameter: Codable, Parameter {
     public private(set) var name: String
     public private(set) var `in`: ParameterLocation
     public private(set) var description: String?
     public private(set) var `required`: Bool?
-}
-
-public class BodyParameter: Parameter {
     public private(set) var schema: Model
 }
 
-public class NonBodyParameter: Parameter {
+public struct NonBodyParameter: Codable, Parameter {
+    public private(set) var name: String
+    public private(set) var `in`: ParameterLocation
+    public private(set) var description: String?
+    public private(set) var `required`: Bool?
     public private(set) var type: ParameterType
     public private(set) var format: String?
     public private(set) var allowEmptyValue: Bool?

@@ -1,11 +1,12 @@
 import Foundation
 
-public class Header: Codable {
+public struct Header: Codable {
     public private(set) var description: String?
     public private(set) var type: ParameterType
     public private(set) var format: String?
     public private(set) var items: Items?
     public private(set) var collectionFormat: CollectionFormat?
+    // TODO: handle generic default values
     // public private(set) var `default`: String?
     public private(set) var maximum: Double?
     public private(set) var exclusiveMaximum: Bool?
@@ -17,6 +18,9 @@ public class Header: Codable {
     public private(set) var maxItems: Int?
     public private(set) var minItems: Int?
     public private(set) var uniqueItems: Bool?
+    // TODO: handle enums
     // public private(set) var enum: [String]?
     public private(set) var multipleOf: Double?
+    // TODO: Handle non-String value vendor extensions
+    public private(set) var vendorExtensions: [String:String]?
 }
